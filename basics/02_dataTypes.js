@@ -2,7 +2,7 @@
 console.log("Vignesh")
 //alert(9+7)// this runs on browser not on nodeJs
 //console.log(9+7) console.log("Vignesh") // shows error not if
-console.log(9+7); console.log("Vignesh")
+// console.log(9+7); console.log("Vignesh")
 let name = " Vignesh"
 let age = 21
 let isloggedin = false

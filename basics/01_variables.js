@@ -2,7 +2,7 @@ const accountId = 14436
 let accountEmail = " vigneshdandu8355@gmail.com"
 var accountPassword = "12345"
 accountCity = "mumbai"
-let accountdirectory
+let accountdirectory            
 
 
 // accountId = 32435 // if defined with const keyword it wont update again
