@@ -23,5 +23,14 @@ console.log(Math.round(4.7)); // Logs: 5
 console.log(Math.sqrt(16)); // Logs: 4
 console.log(Math.max(1, 3, 2)); // Logs: 3
 console.log(Math.min(1, 3, 2)); // Logs: 1
-console.log(Math.random()); // Logs a random number between 0 and 1
+console.log(Math.abs(-4.90))// gives the positive value of the number
+console.log(Math.round(3.4));
+console.log(Math.floor(9.6));
+console.log(Math.ceil(9.2));
+console.log(Math.sqrt(674));
+
+const min = 40
+const max = 60
+
+console.log(Math.floor(Math.random() * (max - min + 1) + min)) // Logs: random number between 40 and 60;
 
