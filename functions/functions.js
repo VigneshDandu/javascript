@@ -16,3 +16,21 @@ function alertMessage(message) {
     return `${message} is a message`;
 }
 console.log(alertMessage('This')); // Corrected string concatenation
+
+// nested function
+function addsquares(a,b){
+    function square(x){
+        return x**2;
+    }
+    return square(a) + square(b);
+}
+console.log(addsquares(3,4))
+
+console.log(Math.sqrt(9)+Math.sqrt(16)) // Corrected Math.sqrt function;
+
+// another method  of writing function
+const square1 = function(number){
+    return number **2;   
+}
+
+console.log(square1(5));
