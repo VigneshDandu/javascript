@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change</title>
+    <link rel="stylesheet" href="colorchange.css">
+</head>
+
+<body>
+    <div class="nav-bg">
+        <button>Home</button>
+        <button>About</button>
+    </div>
+    <h1>Background Color changer</h1>
+    <button class="btn" id="yellow">Yellow</button>
+    <button class="btn" id="blue">Blue</button>
+    <button class="btn" id="green">Green</button>
+</body>
+<script>
+    const buttons = document.querySelectorAll(".btn");
+    buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            const color = button.id;
+            document.body.style.backgroundColor = color;
+        });
+    });
+</script>
+
+</html>
