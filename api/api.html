@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<body>
+    <h1>Hello..!</h1>
+    <button id="picture">BUTTON</button>
+    <div id="result"></div>
+</body>
+<script>
+    const reuestURL ='https://api.github.com/users/vigneshDandu'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',reuestURL)
+    xhr.onreadystatechange =()=>{  // this runs when there is state change
+        console.log(xhr.readyState) 
+        if(xhr.readyState===4){
+            const data = JSON.parse(xhr.responseText)
+            console.log(typeof data)
+            console.log(data.followers)
+        }
+    }
+
+    //console.log(xhr.readyState)
+
+    xhr.send()
+
+    const button = document.getElementById("picture")
+    button.addEventListener('click',()=>{
+        if(xhr.readyState===4){
+            const data = JSON.parse(xhr.responseText)
+            const image = data.avatar_url
+            document.getElementById("result").innerHTML=`<p><img src='${image}'></img>
+            <hr> 
+            <h2>followers are ${data.followers}</h2></p>`
+        }
+
+    })
+
+
+
+
+
+</script>
+</html>

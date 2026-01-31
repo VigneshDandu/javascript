@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hello, Vignesh !</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const sayVignesh = function () {
+        console.log("Hey Vignesh")
+    }
+    const changetext = function () {
+        document.querySelector('h1').innerHTML = "Changed to sanjana"
+        }
+
+    const greet = setTimeout(changetext,2000)
+    
+    setTimeout(sayVignesh, 3000)
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(greet)
+        console.log("stopped greeting")
+    })
+// here we have prevented settimeout to occur by using button and cleartimeout method
+
+</script>
+
+</html>
